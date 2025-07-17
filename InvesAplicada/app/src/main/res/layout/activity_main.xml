@@ -1,0 +1,60 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+    <LinearLayout
+     android:id="@+id/layoutTitulo"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal"
+     android:gravity="center"
+     app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     android:layout_marginTop="24dp"
+     android:layout_marginBottom="16dp">
+
+    <ImageView
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:src="@drawable/notes_24px"
+    android:contentDescription="Ícono de nota"
+    app:tint="@color/black" />
+
+    <TextView
+    android:id="@+id/tvTituloPrincipal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Mis notas"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+
+    <Button
+    android:id="@+id/btnCrearNota"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Crear nueva nota"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginBottom="24dp" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recyclerNotas"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintTop_toBottomOf="@id/layoutTitulo"
+    app:layout_constraintBottom_toTopOf="@id/btnCrearNota"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
