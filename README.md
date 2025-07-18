@@ -7,7 +7,7 @@ Sistema de Notas personales en Koltin
 <img src="https://github.com/user-attachments/assets/21d65650-1122-490d-b700-d25aef5f4b9c" alt="usuario" width="20"> **Integrantes:**
 
 - **Elias Daniel Rodiguez Franco** - RF230727
-- **Marlon Osmin Oriz Carcamo** - OC232936
+- **Marlon Osmin Ortiz Carcamo** - OC232936
 - **Mauricio Enrique Herrera Rico** - HR230334
 ---
 
