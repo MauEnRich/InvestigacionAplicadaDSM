@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <!-- TÍTULO ENCABEZADO -->
+
     <TextView
         android:id="@+id/tvTituloEncabezado"
         android:layout_width="wrap_content"
@@ -20,7 +20,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="24dp" />
 
-    <!-- CAMPO TÍTULO -->
     <EditText
         android:id="@+id/etTitulo"
         android:layout_width="0dp"
@@ -34,7 +33,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp" />
 
-    <!-- CAMPO CONTENIDO -->
     <EditText
         android:id="@+id/etContenido"
         android:layout_width="0dp"
@@ -51,7 +49,7 @@
         app:layout_constraintBottom_toTopOf="@id/btnGuardar"
         android:layout_marginTop="16dp" />
 
-    <!-- BOTÓN GUARDAR -->
+
     <Button
         android:id="@+id/btnGuardar"
         android:layout_width="0dp"
@@ -59,7 +57,21 @@
         android:text="Guardar Nota"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnRegresar"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp" />
+
+
+    <Button
+        android:id="@+id/btnRegresar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Regresar"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnGuardar"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
         android:layout_marginBottom="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

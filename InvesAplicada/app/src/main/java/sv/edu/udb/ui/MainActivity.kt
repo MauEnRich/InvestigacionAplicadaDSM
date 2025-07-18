@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         val btnCrearNota: Button = findViewById(R.id.btnCrearNota)
         btnCrearNota.setOnClickListener {
-            val intent = Intent(this, CrearEditarNotaActivity::class.java)  // Aquí usamos la actividad unificada
+            val intent = Intent(this, CrearEditarNotaActivity::class.java)
             startActivity(intent)
         }
 
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
         notasAdapter = NotaAdapter(
             onEditClick = { notaSeleccionada ->
-                val intent = Intent(this, CrearEditarNotaActivity::class.java).apply {  // Usamos la misma aquí
+                val intent = Intent(this, CrearEditarNotaActivity::class.java).apply {
                     putExtra("nota_id", notaSeleccionada.id)
                     putExtra("nota_titulo", notaSeleccionada.titulo)
                     putExtra("nota_contenido", notaSeleccionada.contenido)

@@ -22,6 +22,8 @@ class CrearEditarNotaActivity : AppCompatActivity() {
     private lateinit var etContenido: EditText
     private lateinit var btnGuardar: Button
     private lateinit var viewModel: NotasViewModel
+    private lateinit var btnRegresar: Button
+
 
     private var notaId: Int = -1
 
@@ -33,7 +35,11 @@ class CrearEditarNotaActivity : AppCompatActivity() {
         etTitulo = findViewById(R.id.etTitulo)
         etContenido = findViewById(R.id.etContenido)
         btnGuardar = findViewById(R.id.btnGuardar)
+        btnRegresar = findViewById(R.id.btnRegresar)
 
+        btnRegresar.setOnClickListener {
+            finish()
+        }
         val database = NotasDatabase.getDatabase(this)
         val notaDao = database.notaDao()
         val factory = NotasViewModelFactory(notaDao)
