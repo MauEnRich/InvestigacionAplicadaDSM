@@ -49,12 +49,12 @@ class CrearEditarNotaActivity : AppCompatActivity() {
         notaId = intent.getIntExtra("nota_id", -1)
         if (notaId != -1) {
 
-            tvTituloEncabezado.text = "Edita esta nota"
+            tvTituloEncabezado.text = "Edita esta tarea"
             etTitulo.setText(intent.getStringExtra("nota_titulo"))
             etContenido.setText(intent.getStringExtra("nota_contenido"))
         } else {
 
-            tvTituloEncabezado.text = "Agrega una nota"
+            tvTituloEncabezado.text = "Agrega una tarea"
         }
 
         btnGuardar.setOnClickListener {
@@ -72,7 +72,7 @@ class CrearEditarNotaActivity : AppCompatActivity() {
                     val notaActualizada = Nota(id = notaId, titulo = titulo, contenido = contenido)
                     viewModel.actualizar(notaActualizada)
                     runOnUiThread {
-                        Toast.makeText(this@CrearEditarNotaActivity, "Nota actualizada", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@CrearEditarNotaActivity, "Tarea actualizada", Toast.LENGTH_SHORT).show()
                         finish()
                     }
                 } else {
@@ -80,7 +80,7 @@ class CrearEditarNotaActivity : AppCompatActivity() {
                     val nuevaNota = Nota(titulo = titulo, contenido = contenido)
                     viewModel.insertar(nuevaNota)
                     runOnUiThread {
-                        Toast.makeText(this@CrearEditarNotaActivity, "Nota guardada", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@CrearEditarNotaActivity, "Tarea guardada", Toast.LENGTH_SHORT).show()
                         finish()
                     }
                 }

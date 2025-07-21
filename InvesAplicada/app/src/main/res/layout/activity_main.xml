@@ -29,7 +29,7 @@
     android:id="@+id/tvTituloPrincipal"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Mis notas"
+    android:text="Mis tareas"
     android:textSize="24sp"
     android:textStyle="bold"
     android:layout_marginStart="8dp"/>
@@ -40,7 +40,7 @@
     android:id="@+id/btnCrearNota"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Crear nueva nota"
+    android:text="Crear nueva tarea"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
